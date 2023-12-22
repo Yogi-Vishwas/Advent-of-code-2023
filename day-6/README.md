@@ -1,7 +1,7 @@
 `f(time, distance) -> number of ways to win a race.`
 
-let's say boat button `holding time = t' ms`
-so `speed = t' mm/ms`
+let's say boat button `holding time = t' ms` <br>
+so `speed = t' mm/ms` <br>
 `time taken by boat to reach the distance = distance / t'`
 
 `total time = t' + (distance / t')`
@@ -23,5 +23,7 @@ Roots of this quadratic equation can be found using
 
 ```math
 root1 = (time + \sqrt{time^2 - 4 * distance}) / 2
-root2 = (time - \sqrt{time^2 - 4 * distance}) / 2
+```
+```math
+root1 = (time - \sqrt{time^2 - 4 * distance}) / 2
 ```
