@@ -1,7 +1,7 @@
 import { readFileSync, type PathLike } from "node:fs";
 
 /**
- * Result is:  240320250
+ * Result is:
  */
 function getMinLocation(filePath: PathLike) {
   const content = readFileSync(filePath, {
@@ -43,9 +43,15 @@ function getMinLocation(filePath: PathLike) {
   }
 
   let minLocationNum: number = Infinity;
-  for (const seedId of seeds) {
-    const locationId = getLocation(seedId);
-    minLocationNum = Math.min(minLocationNum, locationId);
+  for (let index = 0; index < seeds.length; ++index) {
+    if (index % 2 === 0) {
+      const seedRange = seeds[index] + seeds[index + 1];
+      for (let seedId = seeds[index]; seedId < seedRange; ++seedId) {
+        const locationId = getLocation(seedId);
+        minLocationNum = Math.min(minLocationNum, locationId);
+        console.log(seedId, minLocationNum);
+      }
+    }
   }
   return minLocationNum;
 }

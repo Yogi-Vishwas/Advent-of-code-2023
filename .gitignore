@@ -2,3 +2,4 @@ node_modules
 dist
 input.txt
 sample-input*.txt
+*.js
