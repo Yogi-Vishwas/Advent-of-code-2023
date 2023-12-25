@@ -5,7 +5,7 @@ type Path = {
   right: string;
 };
 
-// Result is:
+// Result is: 17099847107071
 function getSteps(filePath: PathLike) {
   function gcd(a: number, b: number): number {
     if (b === 0) return a;
