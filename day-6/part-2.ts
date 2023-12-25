@@ -2,7 +2,7 @@ import { readFileSync, type PathLike } from "node:fs";
 const { pow, sqrt, floor, ceil } = Math;
 
 // Result is:  37286485
-function part1(filePath: PathLike) {
+function part2(filePath: PathLike) {
   const contents = readFileSync(filePath, {
     encoding: "utf-8",
   }).split("\n");
@@ -43,5 +43,5 @@ function part1(filePath: PathLike) {
   return result;
 }
 
-const result = part1("./input.txt");
+const result = part2("./input.txt");
 console.log("Result is: ", result);

@@ -24,6 +24,7 @@ Roots of this quadratic equation can be found using
 ```math
 root1 = (time + \sqrt{time^2 - 4 * distance}) / 2
 ```
+
 ```math
-root1 = (time - \sqrt{time^2 - 4 * distance}) / 2
+root2 = (time - \sqrt{time^2 - 4 * distance}) / 2
 ```
