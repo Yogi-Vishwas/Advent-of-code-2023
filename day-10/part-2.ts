@@ -11,9 +11,9 @@ const dir: Record<Direction, number[]> = {
   west: [-1, 0],
 };
 
-// Result is:  6640
-function getFarthestPosition(filePath: PathLike) {
-  let sReplacement: Pipe = "|";
+// Result is:  411
+function getEnclosedPointsNo(filePath: PathLike) {
+  let sReplacement: Pipe = "|"; // Hardcoded for now
 
   function isWithinBounds(
     x: number,
@@ -121,5 +121,5 @@ function getFarthestPosition(filePath: PathLike) {
   return res;
 }
 
-const res = getFarthestPosition("./input.txt");
+const res = getEnclosedPointsNo("./input.txt");
 console.log("Result is: ", res);

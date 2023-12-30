@@ -73,11 +73,9 @@ function getFarthestPosition(filePath: PathLike) {
     F: ["south", "east"],
   };
 
-  // const startVertexRow = 129;
-  // const startVertexColumn = 88;
   const adjList = getAdjacencyList(paths);
-  adjList["128,88"] = ["129,88", "127,88"];
-  const traversal: Record<string, Vertex> = bfs(adjList, "128,88");
+  adjList["128,88"] = ["129,88", "127,88"]; // Hardcoded for now
+  const traversal: Record<string, Vertex> = bfs(adjList, "128,88"); // Hardcoded for now
   let res = 0;
   for (const values of Object.values(traversal)) {
     res = Math.max(res, values.distance ?? 0);
