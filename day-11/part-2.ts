@@ -8,7 +8,7 @@ type GalaxyData = {
 
 const rateOfExpansion: number = 1000000;
 
-// Result is:
+// Result is: 622120986954
 function getSumOfMinLengths(filePath: PathLike, expansionRate: number) {
   function getMinStepsBetweenGalaxies(
     galaxy1: GalaxyData,
